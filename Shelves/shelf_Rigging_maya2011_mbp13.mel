@@ -1,0 +1,449 @@
+global proc shelf_Rigging () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "icTransferSkinCluster 1 0;" 
+        -enableBackground 0
+        -align "center" 
+        -label "ReadWts" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ReadWts" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "icTransferSkinCluster 1 0;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "icTransferSkinCluster 0 0;" 
+        -enableBackground 0
+        -align "center" 
+        -label "WriteWts" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "WriteWts" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "icTransferSkinCluster 0 0;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import sys\npath = '/Users/mauricioptkvp/Google Drive/MayaTools/cvShapeInverter'\nif path not in sys.path:\n    sys.path.insert(0,path)\nimport cvShapeInverter\ncvShapeInverter.invert()" 
+        -enableBackground 0
+        -align "center" 
+        -label "cvInvert" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cvInvert" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import sys\npath = '/Users/mauricioptkvp/Google Drive/MayaTools/cvShapeInverter'\nif path not in sys.path:\n    sys.path.insert(0,path)\nimport cvShapeInverter\ncvShapeInverter.invert()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "RapidRig_Modular;" 
+        -enableBackground 0
+        -align "center" 
+        -label "RRM" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RRM" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "RapidRig_Modular;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "RapidRig_Modular_Selector;" 
+        -enableBackground 0
+        -align "center" 
+        -label "RRMS" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RRMS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "RapidRig_Modular_Selector;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "scripts_path = '/Users/mauricioptkvp/Google Drive/MayaTools'\nimport sys\nif scripts_path not in sys.path:\n    sys.path.insert(0,scripts_path)\n\nfrom SineRig import SineRig_ui\nreload( SineRig_ui )\nSineRig_ui.SineRig_ui()" 
+        -enableBackground 0
+        -align "center" 
+        -label "SineRig" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SineRig" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "scripts_path = '/Users/mauricioptkvp/Google Drive/MayaTools'\nimport sys\nif scripts_path not in sys.path:\n    sys.path.insert(0,scripts_path)\n\nfrom SineRig import SineRig_ui\nreload( SineRig_ui )\nSineRig_ui.SineRig_ui()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import sys\npath = '/Users/mauricioptkvp/Development/maya/python'\nif path not in sys.path:\n\tsys.path.append(path)\n\nimport msSkinTools\nreload(msSkinTools)\nmsSkinTools.msSkinTools()" 
+        -enableBackground 0
+        -align "center" 
+        -label "SkinTools" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SkinTools" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import sys\npath = '/Users/mauricioptkvp/Development/maya/python'\nif path not in sys.path:\n\tsys.path.append(path)\n\nimport msSkinTools\nreload(msSkinTools)\nmsSkinTools.msSkinTools()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "cometRename;" 
+        -enableBackground 0
+        -align "center" 
+        -label "Rename" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Rename" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "cometRename;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import sys\npath = '/Users/mauricioptkvp/Documents/MayaTools'\nif path not in sys.path:\n    sys.path.append(path)\n\nfrom SDKPoseManager import SDKPoseManager\nreload(SDKPoseManager)" 
+        -enableBackground 0
+        -align "center" 
+        -label "SDKPoseManager" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SDKPoseManager" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import sys\npath = '/Users/mauricioptkvp/Documents/MayaTools'\nif path not in sys.path:\n    sys.path.append(path)\n\nfrom SDKPoseManager import SDKPoseManager\nreload(SDKPoseManager)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "scripts_path = '/Users/mauricioptkvp/Documents/MayaTools/SingleFiles'\nimport sys\nif scripts_path not in sys.path:\n    sys.path.insert(0,scripts_path)\n    \nimport ms_toolBox as tb\nreload(tb)\ntb.ms_toolBox()" 
+        -enableBackground 0
+        -align "center" 
+        -label "ToolBox" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ToolBox" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "scripts_path = '/Users/mauricioptkvp/Documents/MayaTools/SingleFiles'\nimport sys\nif scripts_path not in sys.path:\n    sys.path.insert(0,scripts_path)\n    \nimport ms_toolBox as tb\nreload(tb)\ntb.ms_toolBox()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "scripts_path = '/Users/mauricioptkvp/Documents/MayaTools'\nimport sys\nif scripts_path not in sys.path:\n    sys.path.insert(0,scripts_path)\n    \nfrom NoRollSetup import NoRollSetup\nreload( NoRollSetup )" 
+        -enableBackground 0
+        -align "center" 
+        -label "NoRollSetup" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NoRollSetup" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "scripts_path = '/Users/mauricioptkvp/Documents/MayaTools'\nimport sys\nif scripts_path not in sys.path:\n    sys.path.insert(0,scripts_path)\n    \nfrom NoRollSetup import NoRollSetup\nreload( NoRollSetup )" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "scripts_path = '/Users/mauricioptkvp/Documents/MayaTools'\nimport sys\nif scripts_path not in sys.path:\n    sys.path.insert(0,scripts_path)\n    \nfrom DistanceSDK import DistanceSDK\nreload( DistanceSDK )" 
+        -enableBackground 0
+        -align "center" 
+        -label "DistanceSDK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "DistanceSDK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "scripts_path = '/Users/mauricioptkvp/Documents/MayaTools'\nimport sys\nif scripts_path not in sys.path:\n    sys.path.insert(0,scripts_path)\n    \nfrom DistanceSDK import DistanceSDK\nreload( DistanceSDK )" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "select." 
+        -enableBackground 0
+        -align "center" 
+        -label "select." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "select." 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "aselect.xpm" 
+        -image1 "aselect.xpm" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "select -cl;\ncatch (`select -add \"drivenLf_pectoral5\"`);\ncatch (`select -add \"drivenLf_pectoral4\"`);\ncatch (`select -add \"drivenLf_pectoral3\"`);\ncatch (`select -add \"drivenLf_pectoral2\"`);\ncatch (`select -add \"drivenLf_pectoral1\"`);\ncatch (`select -add \"drivenLf_lats5\"`);\ncatch (`select -add \"drivenLf_lats4\"`);\ncatch (`select -add \"drivenLf_lats3\"`);\ncatch (`select -add \"drivenLf_lats2\"`);\ncatch (`select -add \"drivenLf_lats1\"`);\ncatch (`select -add \"drivenLf_scapula5\"`);\ncatch (`select -add \"drivenLf_scapula4\"`);\ncatch (`select -add \"drivenLf_scapula3\"`);\ncatch (`select -add \"drivenLf_scapula2\"`);\ncatch (`select -add \"drivenLf_scapula1\"`);\ncatch (`select -add \"drivenRt_pectoral5\"`);\ncatch (`select -add \"drivenRt_pectoral4\"`);\ncatch (`select -add \"drivenRt_pectoral3\"`);\ncatch (`select -add \"drivenRt_pectoral2\"`);\ncatch (`select -add \"drivenRt_pectoral1\"`);\ncatch (`select -add \"drivenRt_lats5\"`);\ncatch (`select -add \"drivenRt_lats4\"`);\ncatch (`select -add \"drivenRt_lats3\"`);\ncatch (`select -add \"drivenRt_lats2\"`);\ncatch (`select -add \"drivenRt_lats1\"`);\ncatch (`select -add \"drivenRt_scapula5\"`);\ncatch (`select -add \"drivenRt_scapula4\"`);\ncatch (`select -add \"drivenRt_scapula3\"`);\ncatch (`select -add \"drivenRt_scapula2\"`);\ncatch (`select -add \"drivenRt_scapula1\"`);\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "select." 
+        -enableBackground 0
+        -align "center" 
+        -label "select." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "select." 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "aselect.xpm" 
+        -image1 "aselect.xpm" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "select -cl;\ncatch (`select -add \"rt_bottomLaterus_loc1_up\"`);\ncatch (`select -add \"lf_bottomLaterus_loc1_up\"`);\ncatch (`select -add \"lf_bottomLaterus_loc\"`);\ncatch (`select -add \"rt_bottomLaterus_loc\"`);\ncatch (`select -add \"rt_pectoralMedial_loc1_up\"`);\ncatch (`select -add \"lf_pectoralMedial_loc1_up\"`);\ncatch (`select -add \"lf_pectoralMedial_loc\"`);\ncatch (`select -add \"rt_pectoralMedial_loc\"`);\ncatch (`select -add \"rt_scapulaMedial_loc1_up\"`);\ncatch (`select -add \"lf_scapulaMedial_loc1_up\"`);\ncatch (`select -add \"lf_scapulaMedial_loc\"`);\ncatch (`select -add \"rt_scapulaMedial_loc\"`);\ncatch (`select -add \"r_eyeDownDist_loc\"`);\ncatch (`select -add \"r_eyeUpDist_loc\"`);\ncatch (`select -add \"r_eyeRightDist_loc\"`);\ncatch (`select -add \"r_eyeLeftDist_loc\"`);\ncatch (`select -add \"l_eyeDownDist_loc\"`);\ncatch (`select -add \"l_eyeUpDist_loc\"`);\ncatch (`select -add \"l_eyeRightDist_loc\"`);\ncatch (`select -add \"l_eyeLeftDist_loc\"`);\ncatch (`select -add \"r_eyeFollowDist_loc\"`);\ncatch (`select -add \"l_eyeFollowDist_loc\"`);\ncatch (`select -add \"rt_pectoralLateral_loc1_up\"`);\ncatch (`select -add \"rt_scapulaLateral_loc1_up\"`);\ncatch (`select -add \"rt_pectoralLateral_loc\"`);\ncatch (`select -add \"rt_scapulaLateral_loc\"`);\ncatch (`select -add \"rt_topLaterus_loc1_up\"`);\ncatch (`select -add \"rt_topLaterus_loc\"`);\ncatch (`select -add \"lf_scapulaLateral_loc1_up\"`);\ncatch (`select -add \"lf_pectoralLateral_loc1_up\"`);\ncatch (`select -add \"lf_scapulaLateral_loc\"`);\ncatch (`select -add \"lf_pectoralLateral_loc\"`);\ncatch (`select -add \"lf_topLaterus_loc1_up\"`);\ncatch (`select -add \"lf_topLaterus_loc\"`);\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cluster" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateCluster" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "file -f -options \"v=0\"  -ignoreVersion  -typ \"mayaAscii\" -o \"/Users/mauricioptkvp/Google Drive/ContractWork/ElNingyo/AnglerFish/Vehemensidae_rig_06.ma\";addRecentFile(\"/Users/mauricioptkvp/Google Drive/ContractWork/ElNingyo/AnglerFish/Vehemensidae_rig_06.ma\", \"mayaAscii\");\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "FISHY" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FISHY" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "file -f -options \"v=0\"  -ignoreVersion  -typ \"mayaAscii\" -o \"/Users/mauricioptkvp/Google Drive/ContractWork/ElNingyo/AnglerFish/Vehemensidae_rig_06.ma\";addRecentFile(\"/Users/mauricioptkvp/Google Drive/ContractWork/ElNingyo/AnglerFish/Vehemensidae_rig_06.ma\", \"mayaAscii\");\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "select." 
+        -enableBackground 0
+        -align "center" 
+        -label "select." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "select." 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "aselect.xpm" 
+        -image1 "aselect.xpm" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "select -cl;\ncatch (`select -add \"rt_fish_inf_10_loc\"`);\ncatch (`select -add \"lf_fish_inf_10_loc\"`);\ncatch (`select -add \"rt_fish_inf_11_loc\"`);\ncatch (`select -add \"lf_fish_inf_11_loc\"`);\ncatch (`select -add \"rt_fish_inf_13_loc\"`);\ncatch (`select -add \"rt_fish_inf_12_loc\"`);\ncatch (`select -add \"lf_fish_inf_13_loc\"`);\ncatch (`select -add \"lf_fish_inf_12_loc\"`);\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+    ;
+
+} 

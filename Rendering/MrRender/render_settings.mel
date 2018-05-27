@@ -1,0 +1,59 @@
+setAttr "defaultRenderGlobals.extensionPadding" 4;
+setAttr "defaultRenderGlobals.multiCamNamingMode" 1;
+setAttr  -type "string" defaultRenderGlobals.bufferName "<RenderPass>";
+
+setAttr defaultRenderGlobals.outFormatControl 0;
+setAttr defaultRenderGlobals.animation 1;
+setAttr defaultRenderGlobals.putFrameBeforeExt 1;
+
+setAttr "defaultRenderGlobals.colorProfileEnabled" True;
+setAttr "defaultRenderGlobals.inputColorProfile" 3;
+setAttr "defaultRenderGlobals.outputColorProfile" 2;
+
+setAttr "miDefaultFramebuffer.datatype" 5;
+setAttr "defaultRenderGlobals.byFrameStep" 1;
+setAttr "defaultRenderGlobals.imageFormat" 51;
+setAttr "defaultResolution.pixelAspect" 1;
+setAttr "defaultResolution.deviceAspectRatio" 1.777;
+setAttr "defaultResolution.aspectLock" 1;
+
+setAttr "miDefaultOptions.rayTracing" 1;
+setAttr "miDefaultOptions.globalIllum" 0;
+setAttr "miDefaultOptions.caustics" 0;
+
+setAttr "miDefaultOptions.motionBlur" 2;
+setAttr "miDefaultOptions.motionSteps" 3;
+
+//--- Non-ambient smoke settings
+setAttr "miDefaultOptions.miSamplesMin" 4;
+setAttr "miDefaultOptions.miSamplesMax" 64;
+setAttr "miDefaultOptions.miSamplesQualityR" 2;
+setAttr "miDefaultOptions.miSamplesQualityG" 2;
+setAttr "miDefaultOptions.miSamplesQualityB" 2;
+setAttr "miDefaultOptions.miSamplesQualityA" 2;
+
+//--- Ambient smoke settings
+//setAttr "miDefaultOptions.miSamplesMin" 4;
+//setAttr "miDefaultOptions.miSamplesMax" 32;
+//setAttr "miDefaultOptions.miSamplesQualityR" 1.0;
+//setAttr "miDefaultOptions.miSamplesQualityG" 1.0;
+//setAttr "miDefaultOptions.miSamplesQualityB" 1.0;
+//setAttr "miDefaultOptions.miSamplesQualityA" 1.0;
+
+setAttr "miDefaultOptions.miContrastAsColor" 1;
+setAttr "miDefaultOptions.miSamplesErrorCutoffR" 0.005;
+setAttr "miDefaultOptions.miSamplesErrorCutoffG" 0.005;
+setAttr "miDefaultOptions.miSamplesErrorCutoffB" 0.005;
+setAttr "miDefaultOptions.miSamplesErrorCutoffA" 0.001;
+
+setAttr "miDefaultOptions.filter" 2;
+setAttr "miDefaultOptions.sampleLock" 0;
+setAttr "miDefaultOptions.filterWidth" 1;
+setAttr "miDefaultOptions.filterHeight" 1;
+
+setAttr "miDefaultOptions.maxReflectionRays" 2;
+setAttr "miDefaultOptions.maxRefractionRays" 3;
+setAttr "miDefaultOptions.maxRayDepth" 6;
+setAttr "miDefaultOptions.maxReflectionBlur" 1;
+setAttr "miDefaultOptions.maxRefractionBlur" 1;
+setAttr "miDefaultOptions.maxShadowRayDepth" 2;

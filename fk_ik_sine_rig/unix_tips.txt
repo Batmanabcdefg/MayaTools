@@ -1,0 +1,2 @@
+grep -rl 'windows' ./ | xargs sed -i '.bak' 's/windows/linux/g'
+find . -name 'Icon*' -delete

@@ -1,0 +1,9 @@
+*.pyc
+.DS_Store
+.ropeproject
+ENV
+*.*~
+*.*#
+*.swatches
+*.swp
+.coverage

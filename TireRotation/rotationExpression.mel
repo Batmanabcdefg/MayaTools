@@ -1,0 +1,56 @@
+global vector $pCylinder1oldtranspos =<<0,0,0>>;
+float $radius = 2;
+$distance = 0.0;
+$dctrl = 1;
+$dctrly=1;
+int $revdir=1 ;
+vector $changetrans = `getAttr pCylinder1Transformctrl.translate`;
+float $cx = $changetrans.x-$pCylinder1oldtranspos.x ;
+float $cy = $changetrans.y-$pCylinder1oldtranspos.y ;
+float $cz = $changetrans.z-$pCylinder1oldtranspos.z ;
+
+float $distance = sqrt($cx*$cx + $cy*$cy + $cz*$cz);
+
+$angltrd = pCylinder1Transformctrl.rotateY%360;
+
+if (($changetrans.y != $pCylinder1oldtranspos.y)&& 
+	($changetrans.x == $pCylinder1oldtranspos.x)&&
+	($changetrans.z == $pCylinder1oldtranspos.z))
+	{
+		manipMoveContext -e -mode 4 Move;
+	}
+else{		
+	if ($angltrd==0)
+	{
+		if ($changetrans.z > $pCylinder1oldtranspos.z) $dctrl=1;
+		else $dctrl=-1;
+	}
+	if (($angltrd>0 && $angltrd<=90)||
+	($angltrd<-180 && $angltrd>=-270))
+	{
+		if ($changetrans.x > $pCylinder1oldtranspos.x) $dctrl=1*$dctrl;
+		else $dctrl=-1*$dctrl;
+	}
+	if (($angltrd>90 && $angltrd<=180)||
+	($angltrd<-90 && $angltrd>=-180))
+	{
+		if ($changetrans.z > $pCylinder1oldtranspos.z) $dctrl=-1*$dctrl;
+		else $dctrl=1*$dctrl;
+	}
+	if (($angltrd>180 && $angltrd<=270)||
+	($angltrd<0 && $angltrd>=-90))
+	{
+		if ($changetrans.x > $pCylinder1oldtranspos.x) $dctrl=-1*$dctrl;
+		else $dctrl=1*$dctrl;
+	}
+	if (($angltrd>270 && $angltrd<=360)||
+	($angltrd<-270 && $angltrd>=-360))
+	{
+		if ($changetrans.z > $pCylinder1oldtranspos.z) $dctrl=1*$dctrl;
+		else $dctrl=-1*$dctrl;
+	}
+	pCylinder1Rotationctrl.rotateX = pCylinder1Rotationctrl.rotateX + ($dctrly*($dctrl * (( $distance / (6.2831 * $radius)) * 360.0)));
+	manipMoveContext -e -mode 4 Move;
+}
+
+$pCylinder1oldtranspos=<<pCylinder1Transformctrl.translateX,pCylinder1Transformctrl.translateY,pCylinder1Transformctrl.translateZ>>

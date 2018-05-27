@@ -1,0 +1,20 @@
+A tool to take a snapshot of an ncloth or nucleus node. Given snapshots and a
+playblast, you can more easily track / judge the effect of specific attributes.
+
+Future plans: Support animated attributes, dynamic constraints, and collision
+objects to get a full scene snapshot.
+
+snapshot - Need to select a working directory. Select nodes to generate
+snapshot files for. A snapshot file is a simple text file with: 
+
+attribute:value:type
+
+diff_snapshot - Choose two snapshot files for same kind of node
+(ncloth | nucleus) and it will display the attributes with different values
+
+Use at your own risk, I do not assume any liability for anything that might go
+wrong when using this code.
+
+USE:
+from cloth_snapshot.tool import ui
+ui.ui()

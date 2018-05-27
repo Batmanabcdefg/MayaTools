@@ -1,0 +1,19 @@
+/* XPM */
+static char * shelfTab_xpm[] = {
+"19 10 6 1",
+" 	s bg c #0000FFFF0000",
+".	c #FFFFFFFFFFFF",
+"X	c #EEEEEEEEEEEE",
+"o	c #000000000000",
+"O	c #D5D5DBDBDFDF",
+"+	c #9B9B9B9B9B9B",
+"                   ",
+"    ...........    ",
+"   .XXXXXXXXXXXo   ",
+"  .XOOOOOOOOOOO+o  ",
+"  .XOOOOOOOOOOO+o  ",
+"  .XOOOOOOOOOOO+o  ",
+"  .XOOOOOOOOOOO+o  ",
+"  .XOOOOOOOOOOO+o  ",
+"  .XOOOOOOOOOOO+o  ",
+"  .XOOOOOOOOOOO+o  "};
